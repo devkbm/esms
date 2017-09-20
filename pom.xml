@@ -55,6 +55,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.querydsl</groupId>
+			<artifactId>querydsl-apt</artifactId>			
+		</dependency>
+		
+		<dependency>
+			<groupId>com.querydsl</groupId>
+			<artifactId>querydsl-jpa</artifactId>			
+		</dependency>	
 	</dependencies>
 
 	<build>
@@ -80,7 +90,7 @@
 			          </configuration>
 			        </execution>
 			      </executions>   		      
-			</plugin> 
+			</plugin>			
 		</plugins>
 	</build>
 

@@ -18,33 +18,22 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public class AuditEntity {
-	/**
-	 * 생성일자
-	 */
+	
 	@CreatedDate
-	@Column(name = "fst_rgst_dt", nullable = false, updatable = false)	
+	@Column(name = "created_dt", nullable = false, updatable = false)	
 	protected LocalDateTime createdDateTime;	
 	
-	/**
-	 * 생성유저		
-	 */
 	@CreatedBy
-	@Column(name = "fst_rgst_id", nullable = false, updatable = false)
-	protected String createdId = "test";
-	
-	/**
-	 * 수정일자			
-	 */
+	@Column(name = "created_id", nullable = false, updatable = false)
+	protected String createdId;
+		
 	@LastModifiedDate
-	@Column(name = "last_upd_dt")
+	@Column(name = "updated_dt")
 	protected LocalDateTime lastModifiedDateTime;
-	
-	/**
-	 * 수정유저
-	 */
+		
 	@LastModifiedBy
-	@Column(name = "last_upd_id")
-	protected String lastModifiedId = "test";
+	@Column(name = "updated_id")
+	protected String lastModifiedId;
 
 	public LocalDateTime getCreatedDateTime() {
 		return createdDateTime;
