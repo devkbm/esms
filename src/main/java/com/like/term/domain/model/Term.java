@@ -20,7 +20,7 @@ import lombok.ToString;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @ToString(callSuper=true, includeFieldNames=true)
 @Entity
-@Table(name = "cmterm")
+@Table(name = "term")
 @EntityListeners(AuditingEntityListener.class)
 public class Term extends AuditEntity implements Serializable {
 	

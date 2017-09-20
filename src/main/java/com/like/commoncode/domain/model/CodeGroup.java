@@ -18,9 +18,10 @@ import lombok.Getter;
 import lombok.ToString;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-@ToString(callSuper=true, includeFieldNames=true) 
+@ToString(callSuper=true, includeFieldNames=true)
+@Getter
 @Entity
-@Table(name = "cmcodegroup")
+@Table(name = "codegroup")
 @EntityListeners(AuditingEntityListener.class)
 public class CodeGroup extends AuditEntity implements Serializable {
 	

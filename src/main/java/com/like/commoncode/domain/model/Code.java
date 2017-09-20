@@ -29,7 +29,7 @@ import lombok.ToString;
 @ToString
 @JsonIgnoreProperties(ignoreUnknown = true, value = {"commonCodeGroup"})
 @Entity
-@Table(name = "cmcode")
+@Table(name = "code")
 @EntityListeners(AuditingEntityListener.class)
 public class Code extends AuditEntity implements Serializable {
 		
